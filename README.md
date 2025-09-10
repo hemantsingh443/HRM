@@ -52,7 +52,7 @@ A key feature of this repository is the ability to visualize the model's iterati
 maze size from 3x3..to 11x11 could be a good idea, but nonetheless its a good start for me)
 <div align="center">
 
-![hrm_gif](hrm_model_reasoning.gif)
+![hrm_gif]()
 
 </div> 
 
