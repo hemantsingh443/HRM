@@ -48,7 +48,8 @@ my implementation simplifies the model for clarity while retaining its core prin
 
 A key feature of this repository is the ability to visualize the model's iterative reasoning. it generates a heatmap GIF that shows the model's confidence (`sigmoid` of the output logits) for each cell at every step of the computation.
 
-(the results are not perfect, it only go through more than half pathway. but its a good start for me)
+(the results are not perfect, its confidence only stay through more than half the pathway. scaling up the 
+maze size from 3x3..to 11x11 could be a good idea, but nonetheless its a good start for me)
 <div align="center">
 
 ![hrm_gif](hrm_model_reasoning.gif)
