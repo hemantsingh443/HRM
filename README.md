@@ -48,13 +48,12 @@ my implementation simplifies the model for clarity while retaining its core prin
 
 A key feature of this repository is the ability to visualize the model's iterative reasoning. it generates a heatmap GIF that shows the model's confidence (`sigmoid` of the output logits) for each cell at every step of the computation.
 
-
-
 <div align="center">
 
 ![hrm_gif](hrm_model_reasoning.gif)
 
-</div>
+</div> 
+the results are not perfect, it only go through more than half pathway. but its a good start for me
 
 *   **Early Steps:** The heatmap is often diffuse, representing uncertainty and the exploration of multiple potential paths.
 *   **Later Steps:** As the H-module refines its plan, the confidence sharpens and concentrates along the correct path, while incorrect branches fade away. This visualization provides a intuitive way of understanding how the model "thinks" and converges on a solution.
