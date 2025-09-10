@@ -16,7 +16,7 @@ The core idea is to use two interdependent recurrent modules:
 
 This temporal separation allows the model to perform iterative refinement: the H-module proposes a plan, the L-module explores it, and the result of this exploration is fed back to the H-module to refine the plan for the next cycle.
 
-![HRM Architecture](HRM_Architecture.png){:height="150px" width="150px"}
+![HRM Architecture](HRM_Architecture.png)
 
 ## Architecture Implementation
 
@@ -78,7 +78,7 @@ After training for 100 epochs, the model demonstrates a classic learning pattern
 
 <div align="center">
 
-![hrm_loss](hrmeval.png){:height="200px" width="200px"}
+![hrm_loss](hrmeval.png)
 
 </div>
 
