@@ -1,10 +1,11 @@
 
-Made with [PyTorch](https://pytorch.org/) 💫
+
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.10.2-orange?style=flat&logo=pytorch)](https://pytorch.org/)
 
 # Hierarchical Reasoning Model (HRM) for Maze Solving
 This is my implementation of the **Hierarchical Reasoning Model (HRM)**, a brain-inspired recurrent architecture, applied to the task of maze solving. The implementation is based on the concepts presented in the paper ["Hierarchical Reasoning Model" by Wang et al.](https://arxiv.org/pdf/2506.21734).
 
-The goal of this project was to build a functional HRM and also find deep insights into its reasoning process through visually appealing heatmaps 
+The goal of this project was to build a functional HRM and also find deep insights into its reasoning process through heatmaps
 
 ## Key Concepts
 The HRM architecture is inspired by the hierarchical and multi-timescale processing observed in the human brain. It aims to achieve deep computational reasoning without sacrificing training stability or efficiency.
@@ -15,7 +16,7 @@ The core idea is to use two interdependent recurrent modules:
 
 This temporal separation allows the model to perform iterative refinement: the H-module proposes a plan, the L-module explores it, and the result of this exploration is fed back to the H-module to refine the plan for the next cycle.
 
-![HRM Architecture](HRM_Architecture.png)
+![HRM Architecture](HRM_Architecture.png){:height="150px" width="150px"}
 
 ## Architecture Implementation
 
@@ -47,8 +48,13 @@ my implementation simplifies the model for clarity while retaining its core prin
 
 A key feature of this repository is the ability to visualize the model's iterative reasoning. it generates a heatmap GIF that shows the model's confidence (`sigmoid` of the output logits) for each cell at every step of the computation.
 
+
+
+<div align="center">
+
 ![hrm_gif](hrm_model_reasoning.gif)
 
+</div>
 
 *   **Early Steps:** The heatmap is often diffuse, representing uncertainty and the exploration of multiple potential paths.
 *   **Later Steps:** As the H-module refines its plan, the confidence sharpens and concentrates along the correct path, while incorrect branches fade away. This visualization provides a intuitive way of understanding how the model "thinks" and converges on a solution.
@@ -70,7 +76,11 @@ To ensure the results are reliable and the model doesn't overfit, I used a simpl
 
 After training for 100 epochs, the model demonstrates a classic learning pattern.
 
-![hrm_loss](hrm_loss.png)
+<div align="center">
+
+![hrm_loss](hrmeval.png){:height="200px" width="200px"}
+
+</div>
 
 *   **Loss:** The training loss steadily decreases, while the validation loss decreases and then plateaus around epoch 50. This divergence is a clear sign of overfitting.
 *   **Accuracy:** Similarly, the validation accuracy peaks around 35-40% and then flatlines, while the training accuracy continues to climb.
